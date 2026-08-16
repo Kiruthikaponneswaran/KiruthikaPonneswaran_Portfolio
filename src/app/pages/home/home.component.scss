@@ -1,0 +1,647 @@
+@import "../../../css/variables.scss";
+
+/* =========================================
+   HERO / GREETING SECTION
+========================================= */
+
+.main {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.greet-main {
+    position: relative;
+
+    width: 100%;
+    max-width: none;
+
+    min-height: 78vh;
+
+    margin: 2rem 0 4rem;
+    padding: 2rem 2.5%;
+
+    display: flex;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    overflow: visible;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(59, 130, 246, 0.12),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(124, 58, 237, 0.10),
+            transparent 28%
+        );
+}
+
+/* =========================================
+   DECORATIVE GLOW
+========================================= */
+
+.greet-main::before {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    top: 5%;
+    right: 5%;
+
+    border-radius: 50%;
+
+    background: rgba(37, 99, 235, 0.08);
+
+    filter: blur(70px);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+.greet-main::after {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    bottom: 0;
+    left: 5%;
+
+    border-radius: 50%;
+
+    background: rgba(124, 58, 237, 0.07);
+
+    filter: blur(70px);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =========================================
+   INNER CONTENT CONTAINER
+========================================= */
+
+.gretting-main {
+    position: relative;
+
+    width: 94%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   MAIN FLEX LAYOUT
+========================================= */
+
+.greeting-main {
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 3.5rem;
+
+    z-index: 2;
+}
+
+.greeting-main > * {
+    flex: 1;
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.greeting-text {
+    margin-top: 0;
+    margin-bottom: 1rem;
+
+    font-size: clamp(3rem, 5vw, 5.2rem);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+    font-family: "Google Sans Bold";
+
+    color: $theme-blue;
+
+       background: linear-gradient(110deg, #a03170 0%, #2563eb 45%, #7c3aed 100%);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+}
+
+
+/* =========================================
+   NICKNAME
+========================================= */
+
+.greeting-nickname {
+    display: inline-block;
+
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+
+    font-size: clamp(1.5rem, 2.2vw, 2.2rem);
+
+    line-height: 1.2;
+    font-family: sans-serif;
+    color: #cfa6a4;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.greeting-text-p {
+    max-width: 720px;
+
+    margin: 0 0 2rem;
+
+    font-size: clamp(1.1rem, 1.5vw, 1.45rem);
+
+    line-height: 1.8;
+
+    color: #6f4040;
+
+    font-family: "emoji";
+
+    letter-spacing: 0.2px;
+}
+
+
+/* =========================================
+   BUTTON AREA
+========================================= */
+
+.button-greeting-div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    margin-top: 2rem;
+}
+
+.button-greeting-div button,
+.button-greeting-div a {
+    position: relative;
+
+    border-radius: 12px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.button-greeting-div button:hover,
+.button-greeting-div a:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(37, 99, 235, 0.20);
+}
+
+
+/* =========================================
+   IMAGE AREA
+========================================= */
+
+.greeting-image-div {
+    position: relative;
+
+    width: 100%;
+    max-width: 650px;
+
+    min-height: 520px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: visible;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.greeting-image-div img {
+    position: relative;
+
+    width: 100%;
+    max-width: 620px;
+
+    height: auto;
+
+    object-fit: contain;
+
+    z-index: 2;
+
+    filter:
+        drop-shadow(
+            0 25px 45px rgba(15, 23, 42, 0.15)
+        );
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+.greeting-image-div img:hover {
+    transform: translateY(-8px);
+
+    filter:
+        drop-shadow(
+            0 35px 55px rgba(37, 99, 235, 0.20)
+        );
+}
+
+
+/* =========================================
+   IMAGE GLOW
+========================================= */
+
+.greeting-image-div::before {
+    content: "";
+
+    position: absolute;
+
+    width: 75%;
+    height: 75%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(59, 130, 246, 0.16),
+            rgba(124, 58, 237, 0.08),
+            transparent 70%
+        );
+
+    filter: blur(25px);
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   TECH GRID
+========================================= */
+
+.greeting-image-div::after {
+    content: "";
+
+    position: absolute;
+
+    width: 80%;
+    height: 80%;
+
+    border-radius: 30px;
+
+    background-image:
+        linear-gradient(
+            rgba(59, 130, 246, 0.06) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(59, 130, 246, 0.06) 1px,
+            transparent 1px
+        );
+
+    background-size: 28px 28px;
+
+    mask-image:
+        radial-gradient(
+            circle,
+            black 20%,
+            transparent 75%
+        );
+
+    -webkit-mask-image:
+        radial-gradient(
+            circle,
+            black 20%,
+            transparent 75%
+        );
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =========================================
+   LARGE LAPTOP
+========================================= */
+
+@media (max-width: 1380px) {
+
+    .greet-main {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .gretting-main {
+        width: 96%;
+    }
+
+    .greeting-main {
+        gap: 2.5rem;
+    }
+
+    .greeting-text {
+        font-size: clamp(3rem, 5vw, 4.5rem);
+    }
+
+    .greeting-image-div {
+        min-height: 480px;
+    }
+}
+
+
+/* =========================================
+   TABLET / SMALL LAPTOP
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .greet-main {
+        min-height: auto;
+
+        margin: 2rem 0 3rem;
+
+        padding:
+            2rem
+            2%;
+    }
+
+    .gretting-main {
+        width: 96%;
+    }
+
+    .greeting-main {
+        gap: 2rem;
+    }
+
+    .greeting-text {
+        letter-spacing: -1px;
+    }
+
+    .greeting-text-p {
+        font-size: 1.1rem;
+
+        line-height: 1.7;
+    }
+
+    .greeting-image-div {
+        min-height: 450px;
+    }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .greet-main {
+        padding:
+            2rem
+            3%;
+    }
+
+    .gretting-main {
+        width: 94%;
+    }
+
+    .greeting-main {
+        gap: 2rem;
+    }
+
+    .greeting-text {
+        font-size: 3rem;
+    }
+
+    .greeting-text-p {
+        font-size: 1.05rem;
+
+        line-height: 1.7;
+    }
+
+    .greeting-image-div {
+        min-height: 400px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .main {
+        width: 100%;
+    }
+
+    .greet-main {
+        width: 100%;
+
+        min-height: auto;
+
+        margin:
+            1.5rem
+            0
+            3rem;
+
+        padding:
+            2rem
+            5%
+            4rem;
+
+        box-sizing: border-box;
+    }
+
+    .gretting-main {
+        width: 100%;
+
+        margin: 0 auto;
+    }
+
+    .greeting-main {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 2rem;
+
+        text-align: center;
+    }
+
+    .greeting-main > * {
+        width: 100%;
+    }
+
+    .greeting-text {
+        margin-top: 0;
+
+        font-size:
+            clamp(
+                2.4rem,
+                10vw,
+                3.5rem
+            );
+
+        line-height: 1.1;
+
+        letter-spacing: -1px;
+    }
+
+    .greeting-nickname {
+        font-size: 1.4rem;
+
+        margin-bottom: 1rem;
+    }
+
+    .greeting-text-p {
+        max-width: 600px;
+
+        margin:
+            0
+            auto;
+
+        font-size: 1rem;
+
+        line-height: 1.7;
+    }
+
+    .button-greeting-div {
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        margin-top: 1.5rem;
+    }
+
+    .greeting-image-div {
+        width: 100%;
+
+        min-height: auto;
+
+        margin-top: 1rem;
+    }
+
+    .greeting-image-div img {
+        width: 90%;
+
+        max-width: 500px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .greet-main {
+        padding:
+            1.5rem
+            4%
+            3rem;
+    }
+
+    .greeting-text {
+        font-size: 2.35rem;
+    }
+
+    .greeting-nickname {
+        font-size: 1.25rem;
+    }
+
+    .greeting-text-p {
+        font-size: 0.95rem;
+    }
+
+    .button-greeting-div {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .button-greeting-div button,
+    .button-greeting-div a {
+        width: 100%;
+    }
+
+    .greeting-image-div img {
+        width: 100%;
+    }
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .greeting-image-div img,
+    .button-greeting-div button,
+    .button-greeting-div a {
+        transition: none;
+    }
+
+    .greeting-image-div img:hover,
+    .button-greeting-div button:hover,
+    .button-greeting-div a:hover {
+        transform: none;
+    }
+}
