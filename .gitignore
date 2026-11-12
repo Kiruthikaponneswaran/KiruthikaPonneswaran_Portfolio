@@ -1,5 +1,14 @@
+<<<<<<< HEAD
 node_modules/
 dist/
 .angular/
 .vscode/
 *.log
+=======
+node_modules
+dist
+.env
+.env.local
+server/.env
+server/node_modules
+>>>>>>> e8edcb7 (Update portfolio: contact server and resume)

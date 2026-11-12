@@ -1,0 +1,19 @@
+# Render "Blueprint": deploys the /server folder as a free web service.
+services:
+  - type: web
+    name: portfolio-contact
+    runtime: node
+    plan: free
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: ALLOWED_ORIGIN
+        value: https://kiruthikaponneswaran.github.io
+      - key: RESEND_API_KEY
+        sync: false
+      - key: TO_EMAIL
+        sync: false
