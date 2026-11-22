@@ -16,6 +16,7 @@ export const profile = {
     'React and Angular developer',
     'Django and ASP.NET API builder',
     'Claude and OpenAI integrator',
+    'Builder of Kimmu Stock, a live inventory and ERP app',
     'Mentor who explains things plainly',
   ],
   tagline:
@@ -24,12 +25,29 @@ export const profile = {
   visa: 'UAE Job Seeker Visa',
   email: 'kiruthikaponneswaran3027@gmail.com',
   phone: '+971 55 315 5369',
+  whatsapp: 'https://wa.me/971553155369?text=Hi%20Kiruthika%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20talk%20about%20a%20role.',
+  trust: ['Abu Dhabi, UAE', 'UAE Job Seeker Visa', 'Joins immediately', 'English and plain-language communicator'],
   linkedin: 'https://www.linkedin.com/in/kiruthika-ponneswaran-72b16422a',
   github: 'https://github.com/Kiruthikaponneswaran',
   photo: 'images/profile.jpg', // <- add this file in /public/images
   resume: 'resume/Kiruthika_Ponneswaran_Resume.pdf', // <- add this file in /public/resume
   ring: 'Full stack engineer ✦ React ✦ Angular ✦ TypeScript ✦ Django ✦ ASP.NET ✦ Claude and GPT APIs ✦ ',
 }
+
+// The spotlight card on the first page. Links open in a new tab.
+export const featured = {
+  label: 'Now building · Live on the web',
+  title: 'Kimmu Stock',
+  subtitle: 'Inventory and ERP web app, designed, built and deployed solo',
+  blurb:
+    'Stock, production, sales, purchase, finance and reports in one app, with role-based access, a live dashboard and Excel export.',
+  live: 'https://kimmu-stock.onrender.com/',
+  github: 'https://github.com/Kiruthikaponneswaran/kimmu-stock',
+  stack: ['Next.js 15', 'React 19', 'Redux Toolkit', 'Node.js', 'SQLite'],
+  modules: ['Masters', 'Inventory', 'Production', 'Sales', 'Purchase', 'Finance', 'Accounts', 'Reports'],
+}
+
+export const marquee = ['React.js', 'Angular', 'TypeScript', 'Next.js', 'Node.js', 'Django REST', 'ASP.NET MVC', 'SQL Server', 'SQLite', 'Redux Toolkit', 'RxJS', 'WebSockets', 'Azure', 'Docker', 'Claude API', 'OpenAI API', 'Jest', 'Git and CI/CD']
 
 export const stats = [
   { value: 3, suffix: '+', label: 'Years building for the web' },
@@ -39,7 +57,7 @@ export const stats = [
 ]
 
 export const about = [
-  "I'm a full stack engineer who enjoys the parts of software that make it dependable: clean APIs, reusable components, and production issues traced to their real root cause. In three years I have delivered core modules of an ERP platform used daily by more than 10,000 people, built features for a restaurant product serving 50+ clients including one in Dubai, and wired Claude and OpenAI APIs into working applications.",
+  "I'm a full stack engineer who enjoys the parts of software that make it dependable: clean APIs, reusable components, and production issues traced to their real root cause. In three years I have delivered core modules of an ERP platform used daily by more than 10,000 people, built features for a restaurant product serving 50+ clients including one in Dubai, and wired Claude and OpenAI APIs into working applications. My current project, Kimmu Stock, is a full-stack inventory and ERP web app that I designed, built and deployed on my own, and it is live on the web.",
   'Before engineering I worked as a Placement Mentor, so explaining technical ideas in plain language comes naturally. I have informally mentored two interns, work comfortably with QA and business stakeholders, and write documentation that non-technical readers can follow.',
   'I use AI coding assistants every day and review every line that ships. I am based in Abu Dhabi on a UAE Job Seeker Visa and available immediately.',
 ]
@@ -53,7 +71,7 @@ export const skillGroups = [
   {
     name: 'Back end and data',
     blurb: 'APIs, stored procedures and databases that support the screens.',
-    items: ['C# and ASP.NET MVC', 'Django', 'Django REST Framework', 'Node.js', 'FastAPI', 'REST API design', 'GraphQL', 'WebSockets', 'JWT and Firebase Auth', 'SQL Server', 'PostgreSQL', 'MySQL', 'IndexedDB'],
+    items: ['C# and ASP.NET MVC', 'Django', 'Django REST Framework', 'Node.js', 'SQLite', 'FastAPI', 'REST API design', 'GraphQL', 'WebSockets', 'JWT and Firebase Auth', 'Role-based access control', 'SQL Server', 'PostgreSQL', 'MySQL', 'IndexedDB'],
   },
   {
     name: 'AI and LLM',
@@ -63,7 +81,7 @@ export const skillGroups = [
   {
     name: 'Quality and delivery',
     blurb: 'Tested, measured and shipped through a team workflow.',
-    items: ['Jest', 'Django API tests', 'Lighthouse', 'Chrome DevTools', 'React Profiler', 'WCAG 2.1', 'Git and GitHub', 'CI/CD with GitHub', 'Docker', 'Azure', 'Vercel', 'Firebase', 'Agile and Scrum', 'Code reviews'],
+    items: ['Jest', 'Django API tests', 'Lighthouse', 'Chrome DevTools', 'React Profiler', 'WCAG 2.1', 'Git and GitHub', 'CI/CD with GitHub', 'Docker', 'Azure', 'Vercel', 'Render', 'Firebase', 'Agile and Scrum', 'Code reviews'],
   },
   {
     name: 'Mentoring and learning content',
@@ -77,7 +95,7 @@ export const experience = [
     role: 'Software Developer (Full Stack, Front End and API)',
     company: 'Easy Design Systems Pvt. Ltd.',
     place: 'Coimbatore, India',
-    period: 'Jun 2024 to Aug 2026',
+    period: 'May 2024 to Aug 2026',
     stack: ['React.js', 'Angular', 'TypeScript', 'RxJS', 'REST APIs', 'WebSockets', 'IndexedDB', 'React Native', 'C#', 'ASP.NET MVC', 'SQL Server', 'Azure'],
     points: [
       'Built and maintained the Sales, Finance, Purchase, Accounts, Inventory and Reporting modules of the Titan Enterprise ERP, used daily by 10,000+ users across India and the Gulf, in a team of 10+.',
@@ -88,7 +106,7 @@ export const experience = [
     ],
   },
   {
-    role: 'Web Developer (React.js)',
+    role: 'Full Stack Web Developer',
     company: 'Machenn Innovation',
     place: 'Coimbatore, India',
     period: 'Nov 2023 to Feb 2024',
@@ -100,7 +118,7 @@ export const experience = [
     ],
   },
   {
-    role: 'Python Full Stack Developer Intern',
+    role: 'Python Full Stack Web Developer',
     company: 'Brainery Spot Technology',
     place: 'Coimbatore, India',
     period: 'Apr 2023 to Oct 2023',
@@ -125,6 +143,26 @@ export const experience = [
 
 // Image paths live in /public/images/projects
 export const projects = [
+  {
+    id: 'kimmu-stock',
+    featured: true,
+    title: 'Kimmu Stock',
+    kind: 'Featured · Live project',
+    period: 'In progress',
+    team: 'Solo',
+    image: 'images/projects/kimmu-stock.png',
+    summary: 'A full-stack inventory and ERP web app I designed, built and deployed myself. Live on the web, with the source on GitHub.',
+    role: 'Sole developer. I own the whole application: design, front end, API, database and deployment.',
+    challenge: 'A small business needs stock, production, sales, purchasing and accounts in one place, with different people allowed to do different things, and without an enterprise-sized tool.',
+    solution: 'I built the API with Next.js route handlers on Node.js and SQLite, with JWT login, public signup for read-only viewer accounts, and role-based access (admin, manager, staff, viewer) managed from an Access Rights screen with view, create, edit and delete permissions per module. Stock has movement history, bill of materials and production orders; purchase orders have goods receipt; sales reduce stock automatically; and finance covers expenses, a general ledger and a trial balance.',
+    outcome: 'Eight modules (Masters, Inventory, Production, Sales, Purchase, Finance, Accounts, Reports) in a dark blue business-style interface that works on desktop and mobile, with a dashboard of SVG charts (sales trend, stock value by category, best sellers, stock health) and Excel export on lists and reports. Deployed on Render.',
+    stack: ['Next.js 15', 'React 19', 'Redux Toolkit', 'Node.js', 'SQLite', 'JWT', 'Role-based access', 'Render'],
+    links: {
+      live: 'https://kimmu-stock.onrender.com/',
+      github: 'https://github.com/Kiruthikaponneswaran/kimmu-stock',
+      liveLabel: 'Open live app',
+    },
+  },
   {
     id: 'titan-erp',
     title: 'Titan Enterprise ERP',

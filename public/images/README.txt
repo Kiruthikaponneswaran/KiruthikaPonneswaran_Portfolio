@@ -9,3 +9,6 @@ PUT YOUR IMAGES HERE (exact file names):
 
 Tip: use 16:10 screenshots (e.g. 1600x1000). Until a file exists, the site shows a
 gold placeholder that tells you the exact path it is waiting for.
+
+  projects/kimmu-stock.png          <- Kimmu Stock. Currently an illustrated dashboard preview;
+                                       replace with a real 16:10 screenshot of kimmu-stock.onrender.com

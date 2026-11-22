@@ -1,56 +1,35 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { profile } from '../data/portfolio'
 import { Icon, Reveal, SectionHead } from './ui'
 
 const API = import.meta.env.VITE_CONTACT_API
-const HEALTH = API ? API.replace(/\/contact\/?$/, '/health') : ''
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', message: '', website: '' })
+  const [form, setForm] = useState({ name: '', email: '', message: '' })
   const [status, setStatus] = useState({ state: 'idle', text: '' })
   const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }))
-
-  // Free hosts put idle servers to sleep. Ping once on load so it is awake when visitors send.
-  useEffect(() => {
-    if (HEALTH) fetch(HEALTH).catch(() => {})
-  }, [])
-
-  const mailtoFallback = () => {
-    const subject = encodeURIComponent(`Portfolio enquiry from ${form.name}`)
-    const body = encodeURIComponent(`${form.message}\n\nFrom: ${form.name} (${form.email})`)
-    window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`
-  }
 
   const submit = async (e) => {
     e.preventDefault()
     if (!API) {
-      mailtoFallback()
-      setStatus({ state: 'ok', text: 'Opening your email app with this message.' })
+      const subject = encodeURIComponent(`Portfolio enquiry from ${form.name}`)
+      const body = encodeURIComponent(`${form.message}\n\nFrom: ${form.name} (${form.email})`)
+      window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`
+      setStatus({ state: 'ok', text: 'Your email app should open with the message ready to send.' })
       return
     }
-    setStatus({ state: 'sending', text: 'Sending your message. The first one can take up to a minute.' })
-    const ctrl = new AbortController()
-    const timer = setTimeout(() => ctrl.abort(), 60000)
+    setStatus({ state: 'sending', text: 'Sending your message' })
     try {
       const res = await fetch(API, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
-        signal: ctrl.signal,
       })
-      if (res.status === 429) throw new Error('rate')
-      if (!res.ok) throw new Error('fail')
-      setForm({ name: '', email: '', message: '', website: '' })
+      if (!res.ok) throw new Error()
+      setForm({ name: '', email: '', message: '' })
       setStatus({ state: 'ok', text: 'Message sent. I will reply within two working days.' })
-    } catch (err) {
-      setStatus({
-        state: 'error',
-        text: err.message === 'rate'
-          ? 'Too many messages from this device. Please try again later.'
-          : `The message did not send. Please try again, or email ${profile.email} directly.`,
-      })
-    } finally {
-      clearTimeout(timer)
+    } catch {
+      setStatus({ state: 'error', text: `The message did not send. Please email ${profile.email} directly.` })
     }
   }
 
@@ -77,11 +56,8 @@ export default function Contact() {
               <label>Message
                 <textarea required rows={5} value={form.message} onChange={set('message')} />
               </label>
-              {/* Honeypot: hidden from people, filled by bots */}
-              <input className="hp" tabIndex={-1} autoComplete="off" aria-hidden="true"
-                value={form.website} onChange={set('website')} />
               <button className="btn" type="submit" disabled={status.state === 'sending'}>
-                <Icon name="send" size={18} /> {status.state === 'sending' ? 'Sending' : 'Send message'}
+                <Icon name="send" size={18} /> Send message
               </button>
               <p className={`form-status ${status.state}`} role="status">{status.text}</p>
             </form>

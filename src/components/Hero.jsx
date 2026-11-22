@@ -1,4 +1,4 @@
-import { profile, asset } from '../data/portfolio'
+import { profile, featured, asset } from '../data/portfolio'
 import { useTypewriter } from '../hooks'
 import { Icon, SmartImage } from './ui'
 import Particles from './Particles'
@@ -38,6 +38,51 @@ function Crest() {
   )
 }
 
+function Featured() {
+  return (
+    <div className="container">
+      <aside className="spotlight" data-seq style={{ '--i': 6 }} aria-label={`Featured project: ${featured.title}`}>
+        <div className="spot-copy">
+          <p className="spot-label"><span className="pulse" /> {featured.label}</p>
+          <h2>{featured.title}</h2>
+          <p className="spot-sub">{featured.subtitle}</p>
+          <p className="spot-blurb">{featured.blurb}</p>
+          <ul className="chips small">
+            {featured.stack.map((s) => <li key={s}>{s}</li>)}
+          </ul>
+          <div className="spot-cta">
+            <a className="btn" href={featured.live} target="_blank" rel="noreferrer">
+              <Icon name="external" size={18} /> Open live app
+            </a>
+            <a className="btn btn-ghost" href={featured.github} target="_blank" rel="noreferrer">
+              <Icon name="github" size={18} /> View on GitHub
+            </a>
+          </div>
+        </div>
+        <a className="spot-art" href={featured.live} target="_blank" rel="noreferrer" aria-label="Open the Kimmu Stock live app" tabIndex={-1}>
+          <div className="mock" aria-hidden="true">
+            <div className="mock-side">
+              {featured.modules.map((m, i) => <span key={m} className={i === 1 ? 'on' : ''}>{m}</span>)}
+            </div>
+            <div className="mock-main">
+              <div className="mock-cards"><i /><i /><i /><i /></div>
+              <div className="mock-charts">
+                <div className="mock-line">
+                  <svg viewBox="0 0 200 80" preserveAspectRatio="none">
+                    <polyline points="0,62 25,52 50,56 75,38 100,44 125,24 150,30 175,12 200,18" />
+                  </svg>
+                </div>
+                <div className="mock-bars"><b style={{ height: '38%' }} /><b style={{ height: '64%' }} /><b style={{ height: '48%' }} /><b style={{ height: '82%' }} /><b style={{ height: '58%' }} /></div>
+              </div>
+            </div>
+          </div>
+          <span className="spot-open">Click to open <Icon name="external" size={14} /></span>
+        </a>
+      </aside>
+    </div>
+  )
+}
+
 export default function Hero() {
   const role = useTypewriter(profile.roles)
   return (
@@ -56,8 +101,14 @@ export default function Hero() {
             {role}<span className="caret" aria-hidden="true" />
           </p>
           <p className="tagline" data-seq style={{ '--i': 3 }}>{profile.tagline}</p>
+          <ul className="chips small trust" data-seq style={{ '--i': 3 }}>
+            {profile.trust.map((t) => <li key={t}>{t}</li>)}
+          </ul>
           <div className="cta" data-seq style={{ '--i': 4 }}>
-            <a className="btn" href="#projects">See my work</a>
+            <a className="btn" href={featured.live} target="_blank" rel="noreferrer">
+              <Icon name="external" size={18} /> Live: {featured.title}
+            </a>
+            <a className="btn btn-ghost" href="#projects">See my work</a>
             <a className="btn btn-ghost" href={asset(profile.resume)} target="_blank" rel="noreferrer">
               <Icon name="download" size={18} /> Download resume
             </a>
@@ -71,6 +122,7 @@ export default function Hero() {
         </div>
         <Crest />
       </div>
+      <Featured />
       <a href="#about" className="scroll-cue" aria-label="Scroll to About"><i /></a>
     </section>
   )

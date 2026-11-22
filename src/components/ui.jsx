@@ -11,6 +11,7 @@ const PATHS = {
   close: <path d="M6 6l12 12M18 6 6 18" />,
   send: <path d="M21 3 10 14M21 3l-7 18-4-7-7-4 18-7Z" />,
   menu: <path d="M4 7h16M4 12h16M4 17h16" />,
+  chat: <path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-8l-5 4v-4H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" />,
   expand: <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" />,
 }
 const FILLED = {

@@ -1,14 +1,14 @@
 :root {
-  --royal-950: #080b2e;
-  --royal-900: #0d1142;
-  --royal-800: #151b63;
-  --royal-700: #212a8f;
-  --amethyst: #8268e0;
+  --royal-950: #08080a;
+  --royal-900: #12100d;
+  --royal-800: #19150e;
+  --royal-700: #2b2314;
+  --amethyst: #b9873a;
   --gold: #d9b45b;
   --gold-soft: #f1dda0;
   --gold-deep: #a27b26;
   --ivory: #f6f0e1;
-  --muted: #b4b9e3;
+  --muted: #bdb5a3;
   --line: rgba(217, 180, 91, 0.28);
   --gold-grad: linear-gradient(110deg, #a27b26 0%, #f1dda0 28%, #d9b45b 50%, #f8ebbe 72%, #a27b26 100%);
   --font-display: 'Cormorant Garamond', Georgia, serif;
@@ -34,9 +34,9 @@ body::before {
   position: fixed; inset: 0; z-index: 0; pointer-events: none;
   background:
     radial-gradient(520px circle at var(--mx) var(--my), rgba(217, 180, 91, 0.10), transparent 70%),
-    radial-gradient(900px circle at 85% 8%, rgba(130, 104, 224, 0.22), transparent 60%),
-    radial-gradient(800px circle at 5% 55%, rgba(33, 42, 143, 0.55), transparent 65%),
-    linear-gradient(180deg, #080b2e 0%, #0d1142 55%, #080b2e 100%);
+    radial-gradient(900px circle at 85% 8%, rgba(217, 180, 91, 0.22), transparent 60%),
+    radial-gradient(800px circle at 5% 55%, rgba(74, 56, 20, 0.55), transparent 65%),
+    linear-gradient(180deg, #08080a 0%, #12100d 55%, #08080a 100%);
 }
 #root { position: relative; z-index: 1; }
 img { max-width: 100%; display: block; }
@@ -77,13 +77,13 @@ p { margin: 0 0 1rem; }
 .btn-small { padding: .5rem 1.05rem; font-size: .85rem; }
 .icon-btn {
   display: grid; place-items: center; width: 2.6rem; height: 2.6rem; border-radius: 50%;
-  border: 1px solid var(--line); background: rgba(13, 17, 66, .85); color: var(--gold-soft); cursor: pointer;
+  border: 1px solid var(--line); background: rgba(18, 16, 13, .85); color: var(--gold-soft); cursor: pointer;
   transition: background .2s, transform .2s;
 }
 .icon-btn:hover { background: var(--gold); color: var(--royal-950); transform: rotate(90deg); }
 
 /* ---------- nav ---------- */
-.nav { position: fixed; inset: 0 0 auto 0; z-index: 50; backdrop-filter: blur(14px); background: rgba(8, 11, 46, .62); border-bottom: 1px solid rgba(217, 180, 91, .14); }
+.nav { position: fixed; inset: 0 0 auto 0; z-index: 50; backdrop-filter: blur(14px); background: rgba(8, 8, 10, .62); border-bottom: 1px solid rgba(217, 180, 91, .14); }
 .progress { position: absolute; left: 0; bottom: -1px; height: 2px; width: 100%; background: var(--gold-grad); transform-origin: left; }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 4.1rem; }
 .logo {
@@ -138,7 +138,7 @@ p { margin: 0 0 1rem; }
 .crown path { fill: rgba(217, 180, 91, .18); stroke: var(--gold-soft); stroke-width: 3; stroke-linejoin: round; }
 .crown .band { fill: none; stroke-linecap: round; }
 .crown circle { fill: var(--gold-soft); }
-.badge { position: absolute; display: grid; padding: .6rem 1rem; border-radius: 16px; border: 1px solid var(--line); background: rgba(13, 17, 66, .78); backdrop-filter: blur(10px); animation: bob 6s ease-in-out infinite; box-shadow: 0 14px 30px -14px rgba(0, 0, 0, .6); }
+.badge { position: absolute; display: grid; padding: .6rem 1rem; border-radius: 16px; border: 1px solid var(--line); background: rgba(18, 16, 13, .78); backdrop-filter: blur(10px); animation: bob 6s ease-in-out infinite; box-shadow: 0 14px 30px -14px rgba(0, 0, 0, .6); }
 .badge strong { font: 700 1.2rem var(--font-display); color: var(--gold-soft); line-height: 1.1; }
 .badge span { font-size: .75rem; }
 .badge.b1 { left: -4%; bottom: 14%; }
@@ -161,7 +161,7 @@ p { margin: 0 0 1rem; }
   .cta, .socials { justify-content: center; }
   .loc { margin-left: 0; }
   .menu-btn { display: block; }
-  .nav-links { position: absolute; top: 4.1rem; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem 1.5rem 1.5rem; background: rgba(8, 11, 46, .96); border-bottom: 1px solid var(--line); transform: translateY(-12px); opacity: 0; pointer-events: none; transition: all .3s; }
+  .nav-links { position: absolute; top: 4.1rem; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem 1.5rem 1.5rem; background: rgba(8, 8, 10, .96); border-bottom: 1px solid var(--line); transform: translateY(-12px); opacity: 0; pointer-events: none; transition: all .3s; }
   .nav-links.open { transform: none; opacity: 1; pointer-events: auto; }
   .nav-links a:not(.btn) { padding: .9rem 0; border-bottom: 1px solid rgba(217, 180, 91, .1); }
   .nav-links .btn { margin-top: 1rem; justify-content: center; }

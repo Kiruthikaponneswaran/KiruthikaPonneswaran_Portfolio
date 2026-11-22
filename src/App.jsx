@@ -8,6 +8,7 @@ import Projects from './components/Projects'
 import Credentials from './components/Credentials'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import { Aurora, Marquee, HireFloat } from './components/Extras'
 
 export default function App() {
   // Soft gold spotlight that follows the pointer
@@ -28,9 +29,11 @@ export default function App() {
   return (
     <>
       <a className="skip" href="#about">Skip to content</a>
+      <Aurora />
       <Navbar />
       <main>
         <Hero />
+        <Marquee />
         <About />
         <Skills />
         <Experience />
@@ -39,6 +42,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <HireFloat />
     </>
   )
 }

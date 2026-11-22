@@ -1,6 +1,6 @@
 # Kiruthika Ponneswaran | Portfolio
 
-React + Vite portfolio with a royal indigo and gold theme. Node powers the build and an optional contact-form server.
+React + Vite portfolio with a black and gold theme. Node powers the build and an optional contact-form server.
 
 ## 1. Run it locally
 
@@ -47,24 +47,12 @@ Push to `main`, then Settings > Pages > Source: **GitHub Actions**.
 
 Live URL: https://kiruthikaponneswaran.github.io/KiruthikaPonneswaran_Portfolio/
 
-## 5. Contact form (sends real emails)
+## 5. Contact form
 
-GitHub Pages hosts static files only, so the small Node server in `/server` runs on a free host
-and the form calls it. The server sends mail through Resend's HTTPS API (free hosts block SMTP ports).
+GitHub Pages hosts static files only, so a Node server cannot run there.
 
-1. **Resend:** sign up at resend.com **with kiruthikaponneswaran3027@gmail.com** (the free plan only
-   delivers to the address you signed up with), then create an API key.
-2. **Render:** push the project to GitHub, then Render > New > Blueprint > pick the repo.
-   It reads `render.yaml`. When asked, set `RESEND_API_KEY` (your key) and
-   `TO_EMAIL` (kiruthikaponneswaran3027@gmail.com). Check `ALLOWED_ORIGIN` is
-   `https://kiruthikaponneswaran.github.io`.
-3. Open `https://<your-service>.onrender.com/api/health`. You should see `{"ok":true}`.
-4. In the project root create `.env` (copy `.env.example`):
-   `VITE_CONTACT_API=https://<your-service>.onrender.com/api/contact`
-   then run `npm run deploy`. (If you deploy with GitHub Actions, add the same value as a
-   repository variable named `VITE_CONTACT_API` under Settings > Secrets and variables > Actions > Variables.)
-
-Free Render services sleep when idle. The site wakes the server as soon as the page loads, but
-the very first message after a long quiet period can take up to a minute.
-
-Without `VITE_CONTACT_API` the form falls back to opening the visitor's email app.
+- **Default (no setup):** the form opens the visitor's email app with the message filled in.
+- **With the Node server (optional):** deploy `/server` to Render, Railway or Fly.io, copy
+  `server/.env.example` to `server/.env`, then set `VITE_CONTACT_API` (copy `.env.example` to `.env`,
+  or add a repository variable of the same name for the GitHub Actions build) to
+  `https://<your-server>/api/contact`. Run it locally with `cd server && npm install && npm start`.

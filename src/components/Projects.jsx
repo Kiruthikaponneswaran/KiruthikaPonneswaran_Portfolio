@@ -38,7 +38,7 @@ function Modal({ project: p, onClose }) {
             <div className="modal-links">
               {p.links.live && (
                 <a className="btn" href={p.links.live} target="_blank" rel="noreferrer">
-                  <Icon name="external" size={18} /> Live demo
+                  <Icon name="external" size={18} /> {p.links.liveLabel || 'Live demo'}
                 </a>
               )}
               {p.links.github && (
@@ -62,9 +62,9 @@ export default function Projects() {
         <SectionHead title="Projects" lead="Select a project to read the challenge, the approach and the result." />
         <div className="project-grid">
           {projects.map((p, i) => (
-            <Reveal key={p.id} delay={(i % 3) * 90}>
+            <Reveal key={p.id} delay={(i % 3) * 90} className={p.featured ? 'span-all' : ''}>
               <Tilt
-                className="card project"
+                className={`card project ${p.featured ? 'is-featured' : ''}`}
                 role="button"
                 tabIndex={0}
                 aria-label={`Open case study: ${p.title}`}
@@ -83,6 +83,16 @@ export default function Projects() {
                     {p.stack.length > 4 && <li>+{p.stack.length - 4}</li>}
                   </ul>
                   <span className="more"><Icon name="expand" size={16} /> Read case study</span>
+                  {p.featured && (
+                    <div className="card-links" onClick={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}>
+                      <a className="btn btn-small" href={p.links.live} target="_blank" rel="noreferrer">
+                        <Icon name="external" size={16} /> {p.links.liveLabel || 'Live demo'}
+                      </a>
+                      <a className="btn btn-small btn-ghost" href={p.links.github} target="_blank" rel="noreferrer">
+                        <Icon name="github" size={16} /> GitHub
+                      </a>
+                    </div>
+                  )}
                 </div>
               </Tilt>
             </Reveal>
