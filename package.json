@@ -11,8 +11,12 @@
     "server": "npm --prefix server start"
   },
   "dependencies": {
+    "and": "^0.0.3",
+    "deploy": "^1.1.0",
+    "npm": "^12.2.3",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "run": "^2.1.13"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",

@@ -32,7 +32,7 @@ function Crest() {
         <circle cx="4" cy="14" r="3.5" /><circle cx="50" cy="5" r="3.5" /><circle cx="96" cy="14" r="3.5" />
         <path d="M10 58 H90" className="band" />
       </svg>
-      <div className="badge b1"><strong>10,000+</strong><span>daily ERP users</span></div>
+      <div className="badge b1"><strong>3+ years</strong><span>building for the web</span></div>
       <div className="badge b2"><strong>Claude + GPT</strong><span>API integrations</span></div>
     </div>
   )

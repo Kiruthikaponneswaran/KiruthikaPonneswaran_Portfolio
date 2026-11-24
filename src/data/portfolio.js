@@ -23,7 +23,7 @@ export const profile = {
     'I build dependable web applications, from reusable front ends to the APIs behind them, and I add AI features that stay inside budget.',
   location: 'Abu Dhabi, UAE',
   visa: 'UAE Job Seeker Visa',
-  email: 'kiruthikaponneswaran3027@gmail.com',
+  email: 'kiruthikaponnes22@gmail.com',
   phone: '+971 55 315 5369',
   whatsapp: 'https://wa.me/971553155369?text=Hi%20Kiruthika%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20talk%20about%20a%20role.',
   trust: ['Abu Dhabi, UAE', 'UAE Job Seeker Visa', 'Joins immediately', 'English and plain-language communicator'],
@@ -47,17 +47,16 @@ export const featured = {
   modules: ['Masters', 'Inventory', 'Production', 'Sales', 'Purchase', 'Finance', 'Accounts', 'Reports'],
 }
 
-export const marquee = ['React.js', 'Angular', 'TypeScript', 'Next.js', 'Node.js', 'Django REST', 'ASP.NET MVC', 'SQL Server', 'SQLite', 'Redux Toolkit', 'RxJS', 'WebSockets', 'Azure', 'Docker', 'Claude API', 'OpenAI API', 'Jest', 'Git and CI/CD']
+export const marquee = ['React.js', 'Angular', 'TypeScript', 'Next.js', 'Node.js', 'Django REST', 'ASP.NET MVC', 'SQL Server', 'SQLite', 'Redux Toolkit', 'RxJS', 'WebSockets', 'Docker', 'Claude API', 'OpenAI API', 'Jest', 'Git and CI/CD']
 
 export const stats = [
   { value: 3, suffix: '+', label: 'Years building for the web' },
-  { value: 10000, suffix: '+', label: 'Daily users on the Titan ERP modules I shipped' },
-  { value: 50, suffix: '+', label: 'Clients on the restaurant ERP product' },
+  { value: 4, suffix: '', label: 'Projects built and shipped' },
   { value: 2, suffix: '', label: 'Interns mentored' },
 ]
 
 export const about = [
-  "I'm a full stack engineer who enjoys the parts of software that make it dependable: clean APIs, reusable components, and production issues traced to their real root cause. In three years I have delivered core modules of an ERP platform used daily by more than 10,000 people, built features for a restaurant product serving 50+ clients including one in Dubai, and wired Claude and OpenAI APIs into working applications. My current project, Kimmu Stock, is a full-stack inventory and ERP web app that I designed, built and deployed on my own, and it is live on the web.",
+  "I'm a full stack engineer who enjoys the parts of software that make it dependable: clean APIs, reusable components, and production issues traced to their real root cause. In three years I have delivered core modules of an enterprise ERP application, built features for a restaurant platform used by UAE and Gulf clients, and wired Claude and OpenAI APIs into working applications. My current project, Kimmu Stock, is a full-stack inventory and ERP web app that I designed, built and deployed on my own, and it is live on the web.",
   'Before engineering I worked as a Placement Mentor, so explaining technical ideas in plain language comes naturally. I have informally mentored two interns, work comfortably with QA and business stakeholders, and write documentation that non-technical readers can follow.',
   'I use AI coding assistants every day and review every line that ships. I am based in Abu Dhabi on a UAE Job Seeker Visa and available immediately.',
 ]
@@ -71,7 +70,7 @@ export const skillGroups = [
   {
     name: 'Back end and data',
     blurb: 'APIs, stored procedures and databases that support the screens.',
-    items: ['C# and ASP.NET MVC', 'Django', 'Django REST Framework', 'Node.js', 'SQLite', 'FastAPI', 'REST API design', 'GraphQL', 'WebSockets', 'JWT and Firebase Auth', 'Role-based access control', 'SQL Server', 'PostgreSQL', 'MySQL', 'IndexedDB'],
+    items: ['C# and ASP.NET MVC', 'Django', 'Django REST Framework', 'Node.js', 'SQLite', 'FastAPI', 'REST API design', 'WebSockets', 'JWT and Firebase Auth', 'Role-based access control', 'SQL Server', 'PostgreSQL', 'MySQL', 'IndexedDB'],
   },
   {
     name: 'AI and LLM',
@@ -81,7 +80,7 @@ export const skillGroups = [
   {
     name: 'Quality and delivery',
     blurb: 'Tested, measured and shipped through a team workflow.',
-    items: ['Jest', 'Django API tests', 'Lighthouse', 'Chrome DevTools', 'React Profiler', 'WCAG 2.1', 'Git and GitHub', 'CI/CD with GitHub', 'Docker', 'Azure', 'Vercel', 'Render', 'Firebase', 'Agile and Scrum', 'Code reviews'],
+    items: ['Jest', 'Django API tests', 'Lighthouse', 'Chrome DevTools', 'React Profiler', 'WCAG 2.1', 'Git and GitHub', 'CI/CD with GitHub', 'Docker', 'Vercel', 'Render', 'Firebase', 'Agile and Scrum', 'Code reviews'],
   },
   {
     name: 'Mentoring and learning content',
@@ -95,14 +94,14 @@ export const experience = [
     role: 'Software Developer (Full Stack, Front End and API)',
     company: 'Easy Design Systems Pvt. Ltd.',
     place: 'Coimbatore, India',
-    period: 'May 2024 to Aug 2026',
-    stack: ['React.js', 'Angular', 'TypeScript', 'RxJS', 'REST APIs', 'WebSockets', 'IndexedDB', 'React Native', 'C#', 'ASP.NET MVC', 'SQL Server', 'Azure'],
+    period: 'Jun 2024 to Aug 2026',
+    stack: ['React.js', 'Angular', 'TypeScript', 'RxJS', 'REST APIs', 'WebSockets', 'IndexedDB', 'React Native', 'C#', 'ASP.NET MVC', 'SQL Server'],
     points: [
-      'Built and maintained the Sales, Finance, Purchase, Accounts, Inventory and Reporting modules of the Titan Enterprise ERP, used daily by 10,000+ users across India and the Gulf, in a team of 10+.',
+      'Built and maintained the Sales, Finance, Purchase, Accounts, Inventory and Reporting modules of an enterprise ERP application, working with a team of developers.',
       'Developed reusable Angular components, reactive forms, dynamic tables, filters and validation logic that cut duplicate UI code and sped up new feature delivery.',
-      'Built React and TypeScript screens and reports for a restaurant ERP used by 50+ clients, including Castle IT Solutions in Dubai, and added an IndexedDB layer that removed repeated API calls.',
+      'Built React and TypeScript screens and reports for a restaurant platform used by UAE and Gulf clients, supported its live POS and billing software, and added an IndexedDB layer that removed repeated API calls.',
       'Contributed to the C#/ASP.NET MVC API layer: new endpoints, controllers and SQL Server stored procedures with CRUD operations.',
-      'Handled live production support: reproduced client issues, explained causes and fixes, and deployed fixes to Azure-hosted sites. Informally mentored 2 interns.',
+      'Handled live production support: reproduced client issues, explained causes and fixes, and deployed fixes to live sites. Informally mentored 2 interns.',
     ],
   },
   {
@@ -162,36 +161,6 @@ export const projects = [
       github: 'https://github.com/Kiruthikaponneswaran/kimmu-stock',
       liveLabel: 'Open live app',
     },
-  },
-  {
-    id: 'titan-erp',
-    title: 'Titan Enterprise ERP',
-    kind: 'Enterprise platform',
-    period: 'Jun 2024 to Aug 2026',
-    team: '10+ members',
-    image: 'images/projects/titan-erp.png',
-    summary: 'A live ERP covering sales, finance, purchasing, accounts, inventory and reporting for 10,000+ daily users.',
-    role: 'Front-end developer with API integration. I built the Angular screens, integrated the REST APIs behind them, and wrote C#/ASP.NET endpoints and SQL Server stored procedures when needed.',
-    challenge: 'The Item Master screen needed to show the Bill of Materials, but the BOM lived in a separate Angular project, so the parent application\u2019s routing could not reach it.',
-    solution: 'I built a lightweight Angular app for the BOM and hosted both under the same root. The parent builds the child\u2019s URL dynamically and passes the context as serialized, URL-encoded query parameters. The child decodes them, calls its APIs and renders the BOM. This is deep linking between two applications without coupling their routes or components.',
-    outcome: 'The BOM now opens from inside Item Master without merging the two applications. Reusable components cut duplicate UI code and sped up feature delivery.',
-    stack: ['Angular', 'TypeScript', 'RxJS', 'Angular Material', 'SCSS', 'REST APIs', 'C#', 'ASP.NET MVC', 'SQL Server', 'Git'],
-    links: {},
-  },
-  {
-    id: 'restaurant-erp',
-    title: 'Restaurant ERP for Castle IT Solutions, Dubai',
-    kind: 'Product, 50+ clients',
-    period: 'Jun 2024 to Nov 2024',
-    team: '10 to 15 members',
-    image: 'images/projects/restaurant-erp.png',
-    summary: 'Menu management, ordering, table booking, cart and item management for a restaurant ERP used by 50+ clients.',
-    role: 'Front-end developer in React and TypeScript. I joined near completion, took ownership of the offline data layer, built screens and reports, and handled live production support directly with the client.',
-    challenge: 'Screens kept making repeated API calls for data that rarely changes.',
-    solution: 'I built an IndexedDB storage layer in React and TypeScript so data is stored in the browser and reused. Production issues reported by the client were reproduced with their support team, then fixed in coordination with the developers.',
-    outcome: 'Unnecessary API traffic dropped, screens felt faster, and the Dubai client received the new screens and reports with ongoing live support.',
-    stack: ['React', 'TypeScript', 'IndexedDB', 'React Native', 'WebSockets', 'REST APIs', 'Git'],
-    links: {},
   },
   {
     id: 'chess-platform',
@@ -263,7 +232,7 @@ export const education = [
   {
     title: 'Bachelor of Engineering, Electronics and Communication',
     place: 'University College of Engineering, Dindigul (Anna University)',
-    period: '2018 to 2022',
+    period: '2023',
     detail: 'CGPA 7.82 / 10.0 (78.2%)',
   },
   { title: 'HSC (Class 12), PCMB', place: '', period: '', detail: '918 / 1200 (76.5%)' },

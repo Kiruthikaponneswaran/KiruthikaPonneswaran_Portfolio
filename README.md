@@ -14,8 +14,6 @@ npm run dev          # http://localhost:5173/KiruthikaPonneswaran_Portfolio/
 | File | What it is |
 |------|------------|
 | `public/images/profile.jpg` | Your portrait (shown inside the gold crest) |
-| `public/images/projects/titan-erp.png` | Titan ERP screenshot |
-| `public/images/projects/restaurant-erp.png` | Restaurant ERP screenshot |
 | `public/images/projects/chess-platform.png` | AllReal / Sigaram64 screenshot |
 | `public/images/projects/booking-system.png` | Restaurant Booking System screenshot |
 | `public/images/projects/mini-inventory.png` | Mini Inventory screenshot |
